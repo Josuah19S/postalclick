@@ -1,16 +1,56 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Postal Click</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-  </head>
-  <body>
-    <h1>Postal Click</h1>
-    <div id="map"></div>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="./script.js"></script>
-  </body>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Postal Click</title>
+  
+  <link rel="icon" type="image/png" href="./assets/icon.svg">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <link rel="stylesheet" href="./styles/styles.css">
+  <script type="module" src="./scripts/script.js"></script>
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-content">
+      <h1 class="logo">POSTAL Click</h1>
+      <p class="tagline" data-i18n="tagline">Obtén tu código postal fácil y rápido</p>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <section class="controls-section">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="address-input" data-i18n-placeholder="placeholder" placeholder="Buscar una ubicación...">
+      </div>
+      
+      <button id="get-zip-btn" class="btn btn-primary" data-i18n="button_search">Obtener mi código postal</button>
+      
+      <div class="result-box">
+        <span id="zip-code-result" class="zip-code">-----</span>
+      </div>
+
+      <button id="copy-btn" class="btn btn-secondary">
+        <span id="copy-text" data-i18n="button_copy">📋</span>
+      </button>
+    </section>
+
+    <section class="map-section">
+      <div class="map-header">
+        <p data-i18n="map_instruction">O selecciona un punto en el mapa:</p>
+      </div>
+      <div id="map"></div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>Postal Click © 2026</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</body>
 </html>
